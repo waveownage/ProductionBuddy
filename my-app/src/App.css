@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+.home {
+  background-color:navy;
+  position: absolute;
+  top: 40px; 
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
