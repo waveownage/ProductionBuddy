@@ -3,10 +3,13 @@
 }
 .home {
   background-color:navy;
+  color: white;
   position: absolute;
   top: 40px; 
   bottom: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
