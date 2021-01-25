@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {
   BrowserRouter as Router,
@@ -10,6 +9,19 @@ import {
   Switch,
 } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import Home from "./components/Home"
+import filling1050 from "./components/Filling1050"
+
+
+function App() {
+  return (
+    <div className="App">
+        <Route exact path="/" component={Home}/>
+        <Route exact path="/filling1050" component={filling1050}/>
+    </div>
+  );
+}
 
 ReactDOM.render(
   <Router>
