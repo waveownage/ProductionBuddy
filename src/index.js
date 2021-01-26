@@ -19,12 +19,10 @@ import Filling1050Cage2Fill2 from "./components/Filling1050Cage2Fill2"
 function App() {
   return (
     <div className="App">
-      <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/goalmenu" component={GoalMenu}/>
         <Route exact path="/filling1050-normal" component={Filling1050Normal}/>
         <Route exact path="/filling1050-cage2fill2" component={Filling1050Cage2Fill2}/>
-      </Switch>
     </div>
   );
 }
