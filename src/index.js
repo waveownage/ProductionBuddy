@@ -4,9 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {
   BrowserRouter as Router,
-  Route,
-  useHistory,
-  Switch,
+  Route
 } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';

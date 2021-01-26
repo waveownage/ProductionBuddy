@@ -7,12 +7,12 @@ function Filling1050Normal() {
     return(
         <div class="container home">
             <h1>Cage/Fill</h1>
-            <Button class="btn btn-primary" href="/filling1050-cage2fill2" role="button">Switch to Cage 2 Fill 2</Button>
+            <Button className="btn btn-primary" href="/filling1050-cage2fill2" role="button">Switch to Cage 2 Fill 2</Button>
             <Timer/>
             <div>
             <Clock format={'HH:mm:ss'} ticking={true} timezone={'US/Eastern'} />
             </div>
-            <Button class="btn btn-danger" href="/" role="button">Home</Button>
+            <Button className="btn btn-danger" href="/" role="button">Home</Button>
           
             
         </div>
