@@ -23,7 +23,6 @@ function Timer1050Cage2Fill2() {
   var count = 0
   var fill = 0
 
-  console.log(timer)
 
   if (timer < 25800) {
     message = "Setup"

@@ -12,6 +12,8 @@ function Filling1050Normal() {
             <div>
             <Clock format={'HH:mm:ss'} ticking={true} timezone={'US/Eastern'} />
             </div>
+            <Button class="btn btn-danger" href="/" role="button">Home</Button>
+          
             
         </div>
         

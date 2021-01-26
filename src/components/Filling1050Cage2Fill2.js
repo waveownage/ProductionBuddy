@@ -12,9 +12,8 @@ function Filling1050Cage2Fill2() {
             <div>
             <Clock format={'HH:mm:ss'} ticking={true} timezone={'US/Eastern'} />
             </div>
-            <div>
-            <Button class="btn btn-danger" href="/" role="button">Home</Button>
-            </div>
+            <Button class="btn btn-danger danger" href="/" role="button">Home</Button>
+
             
             
         </div>
