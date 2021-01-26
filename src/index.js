@@ -11,7 +11,9 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Home from "./components/Home"
-import filling1050 from "./components/Filling1050"
+import Filling1050Normal from "./components/Filling1050Normal"
+import GoalMenu from "./components/GoalMenu"
+import Filling1050Cage2Fill2 from "./components/Filling1050Cage2Fill2"
 
 
 function App() {
@@ -19,7 +21,9 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/" component={Home}/>
-        <Route exact path="/filling1050" component={filling1050}/>
+        <Route exact path="/goalmenu" component={GoalMenu}/>
+        <Route exact path="/filling1050-normal" component={Filling1050Normal}/>
+        <Route exact path="/filling1050-cage2fill2" component={Filling1050Cage2Fill2}/>
       </Switch>
     </div>
   );

@@ -1,15 +1,15 @@
 import '../App.css';
 import Button from 'react-bootstrap/Button';
 
-function Home() {
+function GoalMenu() {
     return(
         <div class="container home">
             <div>
-                <h1>Production Buddy</h1>
-                <Button class="btn btn-primary" href="/goalmenu" role="button">Start</Button>
+                <h1>Goal</h1>
+                <Button class="btn btn-primary" href="/filling1050-normal" role="button">1050</Button>
             </div>
         </div>
         
     ) }
 
-export default Home
+export default GoalMenu
