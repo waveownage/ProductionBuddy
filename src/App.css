@@ -5,6 +5,7 @@
   background-color:navy;
   color: white;
   position: absolute;
+  width: 100%;
   top: 40px; 
   bottom: 40px;
   display: flex;
@@ -12,4 +13,21 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
+}
+h1 {
+  font-size: 4vh;
+}
+
+img {
+  width: 80%;
+    height: auto;
+    max-height: 40vh;
+    overflow: hidden;
+    object-position: center center;
+    margin: 2%
+}
+.peach {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  max-height: 30vh;
 }

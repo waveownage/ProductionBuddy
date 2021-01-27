@@ -12,15 +12,23 @@ import Home from "./components/Home"
 import Filling1050Normal from "./components/Filling1050Normal"
 import GoalMenu from "./components/GoalMenu"
 import Filling1050Cage2Fill2 from "./components/Filling1050Cage2Fill2"
+import Filling1125Normal from "./components/Filling1125normal"
+import Filling1200Normal from "./components/Filling1200normal"
+
 
 
 function App() {
+  
+
+
   return (
     <div className="App">
         <Route exact path="/" component={Home}/>
         <Route exact path="/goalmenu" component={GoalMenu}/>
         <Route exact path="/filling1050-normal" component={Filling1050Normal}/>
         <Route exact path="/filling1050-cage2fill2" component={Filling1050Cage2Fill2}/>
+        <Route exact path="/filling1125-normal" component={Filling1125Normal}/>
+        <Route exact path="/filling1200-normal" component={Filling1200Normal}/>
     </div>
   );
 }

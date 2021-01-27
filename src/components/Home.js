@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 
 function Home() {
     return(
-        <div class="container home">
+        <div class="home">
             <div>
                 <h1>Production Buddy</h1>
                 <Button class="btn btn-primary" href="/goalmenu" role="button">Start</Button>

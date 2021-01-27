@@ -1,14 +1,13 @@
-import Timer from "./Timer"
+import Timer1125normal from "./Timer1125normal"
 import Clock from 'react-live-clock';
 import Button from 'react-bootstrap/Button';
 
-function Filling1050Normal() {
+function Filling1125Normal() {
     
     return(
         <div class="home">
             <h1>Cage/Fill</h1>
-            <Button className="btn btn-primary" href="/filling1050-cage2fill2" role="button">Switch to Cage 2 Fill 2</Button>
-            <Timer/>
+            <Timer1125normal/>
             <div>
             <Clock format={'HH:mm:ss'} ticking={true} timezone={'US/Eastern'} />
             </div>
@@ -18,4 +17,4 @@ function Filling1050Normal() {
         </div>
         
     ) }
-export default Filling1050Normal
+export default Filling1125Normal

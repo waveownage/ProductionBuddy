@@ -21,7 +21,7 @@ const celebrateGif = "https://media.giphy.com/media/26u4cqiYI30juCOGY/giphy.gif"
 var image = ""
 
 
-function Timer1050Cage2Fill2() {
+function Timer1200normal() {
   const [fakeCurrentDate, setFakeCurrentDate] = useState(new Date()) // default value can be anything you want
 
   useEffect(() => {
@@ -34,18 +34,29 @@ function Timer1050Cage2Fill2() {
   var timer = hour*60*60 + minute*60 + seconds
   var message = ""
   var count = 0
+  var cage = 0
   var fill = 0
-
 
   if (timer < 25800) {
     message = "Setup"
     count = ""
     image = setUpGif
   }
-  if (timer > 25800 & timer <= 43200) {
-    message = "Cage 2 Fill 2"
-    fill = timer - 25800
-    count = Math.round(fill / 25.14)
+  if (timer > 25800 & timer <= 35400) {
+    message = "Caging"
+    cage = timer - 25800
+    count = Math.round(cage / 4.572)
+    image = walkingGif
+  }
+  if (timer > 35400 & timer <= 36000) {
+    message = "Set Up"
+    count = ""
+    image = setUpGif
+  }
+  if (timer > 36000 & timer <= 43200) {
+    message = "Filling"
+    fill = timer - 36000
+    count = Math.round(fill / 13.5)
     image = walkingGif
   }
   if (timer > 43200 & timer <= 45600) {
@@ -56,7 +67,7 @@ function Timer1050Cage2Fill2() {
   if (timer > 45600 & timer <= 50400) {
     message = "Filling"
     fill = timer - 45600
-    count = 692 + Math.round(fill / 25.14)
+    count = 533 + Math.round(fill / 13.5)
     image = walkingGif
   }
   if (timer > 50400 & timer <= 51600) {
@@ -67,7 +78,7 @@ function Timer1050Cage2Fill2() {
   if (timer > 51600 & timer <= 55800) {
     message = "Filling"
     fill = timer - 51600
-    count = 883 + Math.round(fill / 25.14)
+    count = 889 + Math.round(fill / 13.5)
     image = walkingGif
   }
   if (timer > 55800) {
@@ -87,4 +98,4 @@ function Timer1050Cage2Fill2() {
   )
 }
 
-export default Timer1050Cage2Fill2
+export default Timer1200normal

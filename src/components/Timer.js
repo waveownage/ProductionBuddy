@@ -1,6 +1,17 @@
 import React, { useState, useEffect } from 'react';
-
-const walkingGif = "https://media.giphy.com/media/10h1BGkwYiIydi/giphy.gif" 
+var hero = ""
+var walkingGif = "https://media.giphy.com/media/10h1BGkwYiIydi/giphy.gif"
+function change() {
+  if (walkingGif === "https://media.giphy.com/media/10h1BGkwYiIydi/giphy.gif") {
+    walkingGif = "https://i.pinimg.com/originals/55/3a/4a/553a4a6c08af1bdd956b6a32fe0b3a49.gif"
+    hero = "peach"
+  }
+  else {
+    walkingGif = "https://media.giphy.com/media/10h1BGkwYiIydi/giphy.gif"
+    hero = "mario"
+  }
+}
+ 
 const setUpGif = "https://media.giphy.com/media/3ohzdOrcdpiD26TPt6/giphy.gif"
 const lunchGif = "https://media.giphy.com/media/KeEnqOWYF7tgE4uPyL/giphy.gif"
 const breakGif = "https://media.giphy.com/media/RiWZUGcZPEKdQgrQ96/giphy.gif"
@@ -32,7 +43,7 @@ function Timer() {
   if (timer > 25800 & timer <= 35400) {
     message = "Caging"
     cage = timer - 25800
-    count = Math.round(cage / 8)
+    count = Math.round(cage / 4.572)
     image = walkingGif
   }
   if (timer > 35400 & timer <= 36000) {
@@ -77,9 +88,10 @@ function Timer() {
 
   return(
     <div>
-      <img src={image} alt="loading..." />
+      <img className={hero} src={image} alt="loading..." />
       <h1>{message}</h1>
       <h1>{count}</h1>
+      <button onClick={change}></button>
     </div>
   )
 }
