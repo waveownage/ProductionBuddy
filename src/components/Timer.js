@@ -88,7 +88,7 @@ function Timer() {
 
   return(
     <div>
-      <img className={hero} src={image} alt="loading..." />
+      <img src={image} alt="loading..." />
       <h1>{message}</h1>
       <h1>{count}</h1>
       <button onClick={change}></button>
