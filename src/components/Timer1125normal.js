@@ -45,7 +45,7 @@ function Timer1125normal() {
   if (timer > 25800 & timer <= 35400) {
     message = "Caging"
     cage = timer - 25800
-    count = Math.round(cage / 4.572)
+    count = Math.round(cage / 4.266)
     image = walkingGif
   }
   if (timer > 35400 & timer <= 36000) {

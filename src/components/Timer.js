@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+
+
 var hero = ""
 var walkingGif = "https://media.giphy.com/media/10h1BGkwYiIydi/giphy.gif"
 function change() {
@@ -19,8 +21,10 @@ const celebrateGif = "https://media.giphy.com/media/26u4cqiYI30juCOGY/giphy.gif"
 var image = ""
 
 
-function Timer() {
+const Timer = props => {
   const [fakeCurrentDate, setFakeCurrentDate] = useState(new Date()) // default value can be anything you want
+
+  console.log(props)
 
   useEffect(() => {
       setTimeout(() => setFakeCurrentDate(new Date()), 1000)
