@@ -25,6 +25,7 @@ const Timer = props => {
   const [fakeCurrentDate, setFakeCurrentDate] = useState(new Date()) // default value can be anything you want
 
   console.log(props)
+  a = object.values(hero)
 
   useEffect(() => {
       setTimeout(() => setFakeCurrentDate(new Date()), 1000)
