@@ -30,8 +30,7 @@ const Timer = props => {
   var hour = currentTimeDate.getHours()
   var minute = currentTimeDate.getMinutes()
   var seconds = currentTimeDate.getSeconds()
-  var timers = hour*60*60 + minute*60 + seconds
-  var timer = 36000
+  var timer = hour*60*60 + minute*60 + seconds
   var message = ""
   var count = 0
   var cage = 0
