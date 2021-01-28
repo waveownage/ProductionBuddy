@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -19,23 +19,40 @@ import Filling1200Normal from "./components/Filling1200normal"
 
 function App() {
 
+
   const [currentUser, setCurrentUser] = useState({
-    boy: true,
-    girl: false,
+    boy: true
   });
+
+  function change() {
+    if (currentUser.boy === true) {
+      setCurrentUser({boy: false})
+      }
+    else {
+      setCurrentUser({
+        boy: true
+      })
+    }
+  }
   
-  
+  console.log(currentUser)
   return (
     <div className="App">
-      <button>Hi</button>
-        <Route path="/" component={Home}/>
+      <button onClick={change}></button>
+        <Route exact path="/" component={Home}/>
         <Route exact path="/goalmenu" component={GoalMenu}/>
         <Route exact path="/filling1050-normal">
           <Filling1050Normal currentUser={currentUser}/>
         </Route>
-        <Route exact path="/filling1050-cage2fill2" component={Filling1050Cage2Fill2}/>
-        <Route exact path="/filling1125-normal" component={Filling1125Normal}/>
-        <Route exact path="/filling1200-normal" component={Filling1200Normal}/>
+        <Route exact path="/filling1050-cage2fill2">
+          <Filling1050Cage2Fill2 currentUser={currentUser}/>
+        </Route>
+        <Route exact path="/filling1125-normal">
+          <Filling1125Normal currentUser={currentUser}/>
+        </Route>
+        <Route exact path="/filling1200-normal">
+        <Filling1200Normal currentUser={currentUser}/>
+        </Route>
     </div>
   );
 }
