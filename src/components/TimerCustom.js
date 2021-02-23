@@ -3,6 +3,12 @@ import React, { useState, useEffect } from 'react';
 
 const Timer = props => {
   const [fakeCurrentDate, setFakeCurrentDate] = useState(new Date()) // default value can be anything you want
+  const [goal, setGoal] = useState(1050);
+  const handleChange = (e) => {
+  setGoal(e.target.value);
+}
+  
+  
 
   var a = props.hero
 
@@ -30,14 +36,15 @@ const Timer = props => {
   var hour = currentTimeDate.getHours()
   var minute = currentTimeDate.getMinutes()
   var seconds = currentTimeDate.getSeconds()
-  var timer = hour*60*60 + minute*60 + seconds
+  var timer = hour*60*60 + minute*60 + seconds 
   var message = ""
   var count = 0
   var cage = 0
   var fill = 0
-  var goal = 1050
+  var current = 0
   var cagespeed = 9600 / goal / 2 
   var fillspeed = 16200 / goal
+  console.log(goal)
 
   if (timer < 25800) {
     message = "Setup"
@@ -69,7 +76,7 @@ const Timer = props => {
   if (timer > 45600 & timer <= 50400) {
     message = "Filling"
     fill = timer - 45600
-    count = 465 + Math.round(fill / fillspeed)
+    count = Math.round(7200/fillspeed) + Math.round(fill / fillspeed)
     image = walkingGif
   }
   if (timer > 50400 & timer <= 51600) {
@@ -80,7 +87,7 @@ const Timer = props => {
   if (timer > 51600 & timer <= 55800) {
     message = "Filling"
     fill = timer - 51600
-    count = 775 + Math.round(fill / fillspeed)
+    count = Math.round(12000/fillspeed) + Math.round(fill / fillspeed)
     image = walkingGif
   }
   if (timer > 55800) {
@@ -92,6 +99,11 @@ const Timer = props => {
 
   return(
     <div>
+      <input
+        type="number"
+        value={goal}
+        onChange={handleChange}
+      />
       <img className={imageClass} src={image} alt="loading..." />
       <h1>{message}</h1>
       <h1>{count}</h1>

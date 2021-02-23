@@ -15,6 +15,7 @@ import GoalMenu from "./components/GoalMenu"
 import Filling1050Cage2Fill2 from "./components/Filling1050Cage2Fill2"
 import Filling1125Normal from "./components/Filling1125normal"
 import Filling1200Normal from "./components/Filling1200normal"
+import FillingCustom from "./components/FillingCustom"
 
 
 function App() {
@@ -52,6 +53,9 @@ function App() {
         </Route>
         <Route exact path="/filling1200-normal">
         <Filling1200Normal currentUser={currentUser}/>
+        </Route>
+        <Route exact path="/fillingcustom">
+        <FillingCustom currentUser={currentUser}/>
         </Route>
     </div>
   );

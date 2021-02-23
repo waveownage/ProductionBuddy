@@ -1,6 +1,7 @@
-import Timer from "./Timer"
+import TimerCustom from "./TimerCustom"
 import Clock from 'react-live-clock';
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 
 const Filling1050Normal = props => {
 
@@ -22,7 +23,7 @@ const Filling1050Normal = props => {
     return(
         <div className={heroClass}>
             <h1>Cage/Fill</h1>
-            <Timer hero = {hero}/>
+            <TimerCustom hero = {hero}/>
             <div>
             <Clock format={'h:mm:ssa'} ticking={true} timezone={'US/Eastern'} />
             </div>
