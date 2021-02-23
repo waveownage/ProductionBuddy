@@ -6,21 +6,22 @@ import React from 'react';
 const Filling1125Normal = props => {
 
     var heroClass = "home"
-    var hero = true
+
 
     if (props.currentUser.boy === true) {
         heroClass = "home"
-        hero = true
     }
-    else {
+    if (props.currentUser.girl === true) {
         heroClass = "princess"
-        hero = false
+    }
+    if (props.currentUser.luigi === true) {
+        heroClass = "luigi"
     }
     
     return(
         <div className={heroClass}>
             <h1>Cage/Fill</h1>
-            <Timer1125normal hero = {hero}/>
+            <Timer1125normal hero = {props}/>
             <div>
             <Clock format={'h:mm:ssa'} ticking={true} timezone={'US/Eastern'} />
             </div>

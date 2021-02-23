@@ -7,16 +7,18 @@ const Filling1050Normal = props => {
 
     
     var heroClass = "home"
-    var hero = true
+
 
     if (props.currentUser.boy === true) {
         heroClass = "home"
-        hero = true
     }
-    else {
+    if (props.currentUser.girl === true) {
         heroClass = "princess"
-        hero = false
     }
+    if (props.currentUser.luigi === true) {
+        heroClass = "luigi"
+    }
+
 
     
     
@@ -24,7 +26,7 @@ const Filling1050Normal = props => {
         <div className={heroClass}>
             <h1>Cage/Fill</h1>
             <Button className="btn btn-primary" href="/filling1050-cage2fill2" role="button">Switch to Cage 2 Fill 2</Button>
-            <Timer hero = {hero}/>
+            <Timer hero = {props}/>
             <div>
             <Clock format={'h:mm:ssa'} ticking={true} timezone={'US/Eastern'} />
             </div>

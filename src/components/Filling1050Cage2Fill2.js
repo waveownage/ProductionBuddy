@@ -5,22 +5,23 @@ import React from 'react';
 
 const Filling1050Cage2Fill2 = props => {
     var heroClass = "home"
-    var hero = true
+
 
     if (props.currentUser.boy === true) {
         heroClass = "home"
-        hero = true
     }
-    else {
+    if (props.currentUser.girl === true) {
         heroClass = "princess"
-        hero = false
+    }
+    if (props.currentUser.luigi === true) {
+        heroClass = "luigi"
     }
     
     return(
         <div className={heroClass}>
             <h1>Cage 2 Fill 2</h1>
             <Button className="btn btn-primary" href="/filling1050-normal" role="button">Switch to Cage/Fill</Button>
-            <Timer1050Cage2Fill2 hero = {hero}/>
+            <Timer1050Cage2Fill2 hero = {props}/>
             <div>
             <Clock format={'h:mm:ssa'} ticking={true} timezone={'US/Eastern'} />
             </div>

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 const Timer = props => {
   const [fakeCurrentDate, setFakeCurrentDate] = useState(new Date()) // default value can be anything you want
 
-  var a = props.hero
+  var a = props
 
   const setUpGif = "https://media.giphy.com/media/3ohzdOrcdpiD26TPt6/giphy.gif"
   const lunchGif = "https://media.giphy.com/media/KeEnqOWYF7tgE4uPyL/giphy.gif"
@@ -14,12 +14,16 @@ const Timer = props => {
   var image = ""
   var imageClass = ""
 
-  if (a === true) {
+  if (a.hero.currentUser.boy === true) {
     walkingGif = "https://media.giphy.com/media/10h1BGkwYiIydi/giphy.gif"
     imageClass = "mario"
   }
-  else {
+  if (a.hero.currentUser.girl === true) {
     walkingGif = "https://i.pinimg.com/originals/55/3a/4a/553a4a6c08af1bdd956b6a32fe0b3a49.gif"
+    imageClass = "mario"
+  }
+  if (a.hero.currentUser.luigi === true) {
+    walkingGif = "https://steamuserimages-a.akamaihd.net/ugc/171541089271096213/CFFE888350DD504CD34EE54A001179564F45B30A/"
     imageClass = "mario"
   }
 

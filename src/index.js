@@ -22,19 +22,33 @@ function App() {
 
 
   const [currentUser, setCurrentUser] = useState({
-    boy: true
+    boy: true,
+    girl: false,
+    luigi: false
   });
 
   function change() {
-    if (currentUser.boy === true) {
-      setCurrentUser({boy: false})
-      }
-    else {
-      setCurrentUser({
-        boy: true
+      if (currentUser.boy === true) {
+        setCurrentUser({
+        boy: false,
+        girl: true,
+        luigi: false
       })
+      }
+      if (currentUser.girl === true) {
+        setCurrentUser({
+          boy: false,
+          girl: false,
+          luigi: true
+        })}
+      if (currentUser.luigi === true) {
+        setCurrentUser({
+          boy: true,
+          girl: false,
+          luigi: false
+        })}
     }
-  }
+  
   
   console.log(currentUser)
   return (
