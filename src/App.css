@@ -53,6 +53,19 @@ h1 {
   display: flex;
   flex-direction: column;
 }
+.football {
+  background-image: url("./images/field.jpg");
+  color: white;
+  position: absolute;
+  width: 100%;
+  top: 40px; 
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
 
 input {
   text-align: center;

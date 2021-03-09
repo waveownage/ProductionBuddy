@@ -26,6 +26,10 @@ const Timer1200normal = props => {
     walkingGif = "https://steamuserimages-a.akamaihd.net/ugc/171541089271096213/CFFE888350DD504CD34EE54A001179564F45B30A/"
     imageClass = "mario"
   }
+  if (a.hero.currentUser.football === true) {
+    walkingGif = "https://media.giphy.com/media/vYuOdwunVxpJpGVTTg/giphy.gif"
+    imageClass = "mario"
+  }
 
 
   useEffect(() => {

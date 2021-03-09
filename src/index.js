@@ -24,7 +24,8 @@ function App() {
   const [currentUser, setCurrentUser] = useState({
     boy: true,
     girl: false,
-    luigi: false
+    luigi: false,
+    football: false,
   });
 
   function change() {
@@ -32,21 +33,31 @@ function App() {
         setCurrentUser({
         boy: false,
         girl: true,
-        luigi: false
+        luigi: false,
+        football: false,
       })
       }
       if (currentUser.girl === true) {
         setCurrentUser({
           boy: false,
           girl: false,
-          luigi: true
+          luigi: true,
+          football: false,
         })}
       if (currentUser.luigi === true) {
         setCurrentUser({
-          boy: true,
+          boy: false,
           girl: false,
-          luigi: false
+          luigi: false,
+          football: true,
         })}
+        if (currentUser.football === true) {
+          setCurrentUser({
+            boy: true,
+            girl: false,
+            luigi: false,
+            football: false,
+          })}
     }
   
   

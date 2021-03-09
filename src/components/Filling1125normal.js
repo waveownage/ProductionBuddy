@@ -17,6 +17,9 @@ const Filling1125Normal = props => {
     if (props.currentUser.luigi === true) {
         heroClass = "luigi"
     }
+    if (props.currentUser.football === true) {
+        heroClass = "football"
+    }
     
     return(
         <div className={heroClass}>
