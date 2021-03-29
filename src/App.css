@@ -55,7 +55,7 @@ h1 {
 }
 .football {
   background-image: url("./images/field.jpg");
-  color: white;
+  color: black;
   position: absolute;
   width: 100%;
   top: 40px; 
