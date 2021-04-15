@@ -16,6 +16,7 @@ import Filling1050Cage2Fill2 from "./components/Filling1050Cage2Fill2"
 import Filling1125Normal from "./components/Filling1125normal"
 import Filling1200Normal from "./components/Filling1200normal"
 import FillingCustom from "./components/FillingCustom"
+import FillingOnly from "./components/FillingOnly"
 
 
 function App() {
@@ -81,6 +82,9 @@ function App() {
         </Route>
         <Route exact path="/fillingcustom">
         <FillingCustom currentUser={currentUser}/>
+        </Route>
+        <Route exact path="/fillingonly">
+        <FillingOnly currentUser={currentUser}/>
         </Route>
     </div>
   );

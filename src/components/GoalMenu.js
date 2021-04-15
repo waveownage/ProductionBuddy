@@ -10,6 +10,7 @@ function GoalMenu() {
                 <Button class="btn btn-primary" href="/filling1125-normal" role="button">1125</Button>
                 <Button class="btn btn-primary" href="/filling1200-normal" role="button">1200</Button>
                 <Button class="btn btn-primary" href="/fillingcustom" role="button">Custom</Button>
+                <Button class="btn btn-primary" href="/fillingonly" role="button">Filling Only</Button>
             </div>
         </div>
         
