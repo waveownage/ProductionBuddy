@@ -88,11 +88,59 @@ const Timer = props => {
     count = 775 + Math.round(fill / 15.3)
     image = walkingGif
   }
-  if (timer > 55800) {
+  if (timer > 55800 & timer < 59400) {
     message = "Complete!!!"
     count = ""
     image = celebrateGif
   }
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  if (timer >= 59400 & timer < 60000) {
+    message = "Setup"
+    count = ""
+    image = setUpGif
+  }
+  if (timer >=60000 & timer < 68400){
+    message = "Caging"
+    cage = timer - 60000
+    count = Math.round(cage / 4.572)
+    image = walkingGif
+  }
+  if (timer >=68400 & timer < 69000) {
+    message = "10 Minute Break"
+    count = ""
+    image = breakGif
+  } 
+  if (timer > 69000 & timer <= 73800) {
+    message = "Filling"
+    fill = timer - 69000
+    count = Math.round(fill / 16.60)
+    image = walkingGif
+  }
+  if (timer > 73800 & timer <= 75600) {
+    message = "30 Minute Lunch"
+    count = ""
+    image = lunchGif
+  }
+  if (timer > 75600 & timer <= 86400) {
+    message = "Filling"
+    fill = timer - 75600
+    count = 289 + Math.round(fill / 16.60)
+    image = walkingGif
+  }
+  if (timer > 0 & timer <= 1800) {
+    message = "Filling"
+    fill = timer
+    count = 940 + Math.round(fill / 16.40)
+    image = walkingGif
+  }
+  if (timer > 1800 & timer < 25800) {
+    message = "Complete!!!"
+    count = ""
+    image = celebrateGif
+  }
+  
+
+   
 
 
   return(
