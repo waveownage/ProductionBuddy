@@ -38,12 +38,10 @@ const TimerThirdShiftCage = props => {
   var hour = currentTimeDate.getHours()
   var minute = currentTimeDate.getMinutes()
   var seconds = currentTimeDate.getSeconds()
-  //var timer = hour*60*60 + minute*60 + seconds
-  var timer = 24300
+  var timer = hour*60*60 + minute*60 + seconds
   var message = ""
   var count = 0
   var cage = 0
-  var fill = 0
 
   if (timer >= 79200 & timer <= 79800) {
     message = "Setup"
