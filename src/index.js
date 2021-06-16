@@ -17,6 +17,7 @@ import Filling1125Normal from "./components/Filling1125normal"
 import Filling1200Normal from "./components/Filling1200normal"
 import FillingCustom from "./components/FillingCustom"
 import FillingOnly from "./components/FillingOnly"
+import CagingThirdShift from "./components/CagingThirdShift"
 
 
 function App() {
@@ -85,6 +86,9 @@ function App() {
         </Route>
         <Route exact path="/fillingonly">
         <FillingOnly currentUser={currentUser}/>
+        </Route>
+        <Route exact path="/cagingthirdshift">
+        <CagingThirdShift currentUser={currentUser}/>
         </Route>
     </div>
   );
