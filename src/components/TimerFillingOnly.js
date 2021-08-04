@@ -42,6 +42,7 @@ const Timer = props => {
   var message = ""
   var count = 0
   var fill = 0
+  var percentage = 0
 
   if (timer < 25800) {
     message = "Setup"
@@ -51,8 +52,9 @@ const Timer = props => {
   if (timer > 25800 & timer <= 43200) {
     message = "Filling"
     fill = timer - 25800
-    count = Math.round(fill / 15.3)
+    count = Math.round(fill / 6.5)
     image = walkingGif
+    percentage = Math.round(count/4000 * 100)
   }
   if (timer > 43200 & timer <= 45600) {
     message = "40 Minute Lunch"
@@ -62,8 +64,9 @@ const Timer = props => {
   if (timer > 45600 & timer <= 50400) {
     message = "Filling"
     fill = timer - 45600
-    count = 1137 + Math.round(fill / 15.3)
+    count = 2677 + Math.round(fill / 6.75)
     image = walkingGif
+    percentage = Math.round(count/4000 * 100)
   }
   if (timer > 50400 & timer <= 51600) {
     message = "20 Minute Break"
@@ -73,8 +76,9 @@ const Timer = props => {
   if (timer > 51600 & timer <= 55800) {
     message = "Filling"
     fill = timer - 51600
-    count = 1450 + Math.round(fill / 15.3)
+    count = 3388 + Math.round(fill / 6.86)
     image = walkingGif
+    percentage = Math.round(count/4000 * 100)
   }
   if (timer > 55800 & timer < 59400) {
     message = "Complete!!!"
@@ -135,7 +139,7 @@ const Timer = props => {
     <div>
       <img className={imageClass} src={image} alt="loading..." />
       <h1>{message}</h1>
-      <h1>{count}</h1>
+      <h1>{count} &nbsp; &nbsp;   {percentage}%</h1>
     </div>
   )
 }
