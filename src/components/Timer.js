@@ -44,6 +44,7 @@ const Timer = props => {
   var count = 0
   var cage = 0
   var fill = 0
+  var totalCage= 0
 
   if (timer >= 59400 & timer < 60000) {
     message = "Setup"
@@ -53,7 +54,7 @@ const Timer = props => {
   if (timer >=60000 & timer <= 63600){
     message = "Caging"
     cage = timer - 60000
-    count = Math.round(cage / 4.5)
+    totalCage = Math.round(cage / 4.5)
     image = walkingGif
   }
   if (timer > 63600 & timer <= 64200) {
@@ -113,6 +114,7 @@ const Timer = props => {
     <div>
       <img className={imageClass} src={image} alt="loading..." />
       <h1>{message}</h1>
+      <h1> {cageCount} </h1>
       <h1>Trays: {trays} Total Sips:{count}</h1>
     </div>
   )
