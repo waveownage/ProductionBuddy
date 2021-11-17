@@ -114,7 +114,7 @@ const Timer = props => {
     <div>
       <img className={imageClass} src={image} alt="loading..." />
       <h1>{message}</h1>
-      <h1> Cages: {cageCount} </h1>
+      <h1> Cages: {totalCage} </h1>
       <h1>Trays: {trays} Total Sips:{count}</h1>
     </div>
   )
