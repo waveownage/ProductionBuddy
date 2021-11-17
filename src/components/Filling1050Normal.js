@@ -27,8 +27,7 @@ const Filling1050Normal = props => {
     
     return(
         <div className={heroClass}>
-            <h1>Cage/Fill</h1>
-            <Button className="btn btn-primary" href="/filling1050-cage2fill2" role="button">Switch to Cage 2 Fill 2</Button>
+            <h1>Goal:3000</h1>
             <Timer hero = {props}/>
             <div>
             <Clock format={'h:mm:ssa'} ticking={true} timezone={'US/Eastern'} />

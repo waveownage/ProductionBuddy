@@ -39,73 +39,36 @@ const Timer = props => {
   var minute = currentTimeDate.getMinutes()
   var seconds = currentTimeDate.getSeconds()
   var timer = hour*60*60 + minute*60 + seconds
-  var message = ""
+  var trays = 0
+  var message = "" 
   var count = 0
   var cage = 0
   var fill = 0
 
-  if (timer < 25800) {
-    message = "Setup"
-    count = ""
-    image = setUpGif
-  }
-  if (timer > 25800 & timer <= 35400) {
-    message = "Caging"
-    cage = timer - 25800
-    count = Math.round(cage / 4.572)
-    image = walkingGif
-  }
-  if (timer > 35400 & timer <= 36000) {
-    message = "Set Up"
-    count = ""
-    image = setUpGif
-  }
-  if (timer > 36000 & timer <= 43200) {
-    message = "Filling"
-    fill = timer - 36000
-    count = Math.round(fill / 15.3)
-    image = walkingGif
-  }
-  if (timer > 43200 & timer <= 45600) {
-    message = "40 Minute Lunch"
-    count = ""
-    image = lunchGif
-  }
-  if (timer > 45600 & timer <= 50400) {
-    message = "Filling"
-    fill = timer - 45600
-    count = 465 + Math.round(fill / 15.3)
-    image = walkingGif
-  }
-  if (timer > 50400 & timer <= 51600) {
-    message = "20 Minute Break"
-    count = ""
-    image = breakGif
-  }
-  if (timer > 51600 & timer <= 55800) {
-    message = "Filling"
-    fill = timer - 51600
-    count = 775 + Math.round(fill / 15.3)
-    image = walkingGif
-  }
-  if (timer > 55800 & timer < 59400) {
-    message = "Complete!!!"
-    count = ""
-    image = celebrateGif
-  }
-  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   if (timer >= 59400 & timer < 60000) {
     message = "Setup"
     count = ""
     image = setUpGif
   }
-  if (timer >=60000 & timer < 68400){
+  if (timer >=60000 & timer <= 63600){
     message = "Caging"
     cage = timer - 60000
-    count = Math.round(cage / 4.572)
+    count = Math.round(cage / 4.5)
     image = walkingGif
   }
-  if (timer >=68400 & timer < 69000) {
+  if (timer > 63600 & timer <= 64200) {
+    message = "Setup"
+    count = ""
+    image = setUpGif
+  }
+  if (timer > 64200 & timer <= 68400) {
+    message = "Filling"
+    fill = timer - 64200
+    count = Math.floor(Math.round(fill / 7.0)/64)*64
+    trays = count/64
+    image = walkingGif
+  }
+  if (timer > 68400 & timer <= 69000) {
     message = "10 Minute Break"
     count = ""
     image = breakGif
@@ -113,7 +76,8 @@ const Timer = props => {
   if (timer > 69000 & timer <= 73800) {
     message = "Filling"
     fill = timer - 69000
-    count = Math.round(fill / 16.60)
+    count = 576 + Math.floor(Math.round(fill / 7.0)/64)*64
+    trays = count/64
     image = walkingGif
   }
   if (timer > 73800 & timer <= 75600) {
@@ -124,16 +88,18 @@ const Timer = props => {
   if (timer > 75600 & timer <= 86400) {
     message = "Filling"
     fill = timer - 75600
-    count = 289 + Math.round(fill / 16.60)
+    count = 1216 + Math.floor(Math.round(fill / 7.0)/64)*64
+    trays = count/64
     image = walkingGif
   }
   if (timer > 0 & timer <= 1800) {
     message = "Filling"
     fill = timer
-    count = 940 + Math.round(fill / 16.40)
+    count = 2752 + Math.floor(Math.round(fill / 7.0)/64)*64
+    trays = count/64
     image = walkingGif
   }
-  if (timer > 1800 & timer < 25800) {
+  if (timer > 1800 & timer <= 25800) {
     message = "Complete!!!"
     count = ""
     image = celebrateGif
@@ -147,7 +113,7 @@ const Timer = props => {
     <div>
       <img className={imageClass} src={image} alt="loading..." />
       <h1>{message}</h1>
-      <h1>{count}</h1>
+      <h1>Trays: {trays} Total Sips:{count}</h1>
     </div>
   )
 }
